@@ -24,12 +24,15 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/webcam.swf"
             ],
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./src/assets/js/webcam.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -127,6 +130,41 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "webcam": {
+      "root": "projects/webcam",
+      "sourceRoot": "projects/webcam/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/webcam/tsconfig.lib.json",
+            "project": "projects/webcam/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/webcam/src/test.ts",
+            "tsConfig": "projects/webcam/tsconfig.spec.json",
+            "karmaConfig": "projects/webcam/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/webcam/tsconfig.lib.json",
+              "projects/webcam/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
