@@ -1,6 +1,19 @@
 {
-  "name": "webcam",
-  "version": "0.0.1",
+  "name": "ngx-camera",
+  "version": "1.0.0",
+  "description": "This is a simple example Angular Library published to npm.",
+  "author": "Joginaidu Gopisetti (jogigj1408@gmail.com)",
+  "keywords" :[
+    "Angular",
+    "Javascript",
+    "TypeScript",
+    "Webcam"
+  ],
+  "license" : "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/jogi323/Ngx-Camera"
+  },
   "peerDependencies": {
     "@angular/common": "^7.1.0",
     "@angular/core": "^7.1.0"
