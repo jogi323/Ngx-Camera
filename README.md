@@ -12,7 +12,7 @@ This Section will describe how to use this library in your application.
 
 1) Install the library using npm command:
 
-`npm install --save ngx-camera`
+      `npm install --save ngx-camera`
 
 2) Import `WebcamModule` in your module
 
@@ -31,6 +31,7 @@ This Section will describe how to use this library in your application.
     ```
 
 3) Now use `WebcamComponent` in your component/page.
+
     `<ngx-camera [width]="640" [height]="480" (imageCaptured)="imageCaptured($event)"></ngx-camera>`
 
 ## Options
