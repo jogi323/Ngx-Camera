@@ -12,7 +12,7 @@ This Section will describe how to use this library in your application.
 
 1) Install the library using npm command:
 
-  `npm install --save ngx-camera`
+      `npm install --save ngx-camera`
 
 2) Import `WebcamModule` in your module
 
