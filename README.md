@@ -7,6 +7,32 @@ This is a simple angular 7.1.2 application for webcam which will work in IE11 as
 * Photo capturing
 * Smartphone compatibility
 
+## Usage
+This Section will describe how to use this library in your application.
+
+1) Install the library using npm command:
+
+`npm install --save ngx-camera`
+
+2) Import `WebcamModule` in your module
+
+    ```
+        import {WebcamModule} from 'ngx-camera';
+
+        @NgModule({
+        imports: [
+            WebcamModule,
+            ...
+        ],
+        ...
+        })
+        export class AppModule { }
+
+    ```
+
+3) Now use `WebcamComponent` in your component/page.
+    `<ngx-camera [width]="640" [height]="480" (imageCaptured)="imageCaptured($event)"></ngx-camera>`
+
 ## Options
 This section describes the basic inputs/outputs of the component and all inputs are optional.
 
