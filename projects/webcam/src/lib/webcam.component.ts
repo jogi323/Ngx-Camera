@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
-import * as Webcam from 'src/assets/js/webcam.js';
+import * as Webcam from '../assets/js/webcam.js';
 
 @Component({
   selector: 'ngx-camera',
@@ -16,8 +16,8 @@ import * as Webcam from 'src/assets/js/webcam.js';
             <canvas #canvas id="canvas" width="{{width}}" height="{{height}}" style="display:none;"></canvas>
           </div>
         </div>
-        <button *ngIf="enableCamera" id="capture" class="capture-clean" (click)="capture()" title="Capture Picture">
-          <img class="img-responsive" src="assets/images/camera.svg" alt="camera capture icon" />
+        <button *ngIf="enableCamera" id="capture" class="capture-clean" (click)="capture()" title="Capture Picture"> Take a picture
+          <!--<img class="img-responsive" src="assets/images/camera.svg" alt="camera capture icon" />-->
         </button>
         <!--<button class="toggle-camera">Toggle camera on/off</button>-->
         <div class="captured-image" *ngIf="resultBase64">
