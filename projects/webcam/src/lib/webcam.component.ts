@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
-import * as Webcam from '../assets/js/webcam.js';
+import * as Webcam from 'src/assets/js/webcam.js';
 
 @Component({
   selector: 'ngx-camera',
@@ -33,10 +33,6 @@ import * as Webcam from '../assets/js/webcam.js';
     `.capture-clean{
       position: relative;
       left: 48%;
-      background: white;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
       cursor: pointer;
   }
   .captured-image {
